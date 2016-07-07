@@ -34,7 +34,7 @@ class ScbLine : SKShapeNode {
         let path = CGPathCreateMutable()
         CGPathMoveToPoint(path, nil, start.x, start.y)
         self.path = path
-        self.lineWidth = 5
+        self.lineWidth = 8
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -161,7 +161,7 @@ class ScbLine : SKShapeNode {
         
         // print("slope1 \(slope1), slope2 \(slope2), ds: \(ds)")
         
-        return ds < 0.1;
+        return ds < 0.2;
     }
     func computeNear() -> Bool {
         return state != .DragMiddle
